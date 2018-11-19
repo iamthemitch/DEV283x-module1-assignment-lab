@@ -16,7 +16,7 @@ const convertFile = (inputFile = 'customer-data.csv') => {
     csvtojson()
         .fromFile(inputFile)
         .then((jsonObj) => {
-            fs.writeFileSync(path.join(__dirname, outputFile), JSON.stringify(jsonObj));
+            fs.writeFileSync(path.join(__dirname, outputFile), JSON.stringify(jsonObj, null, 2));
         })
 }
 
